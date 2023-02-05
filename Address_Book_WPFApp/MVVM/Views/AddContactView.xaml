@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="Address_Book_WPFApp.MVVM.Views.AddContactView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Address_Book_WPFApp.MVVM.Views"
+             xmlns:viewmodels="clr-namespace:Address_Book_WPFApp.MVVM.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewmodels:AddContactViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="ADD CONTACT" HorizontalAlignment="Center" FontSize="18" FontWeight="Medium"/>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" Width="500">
+            <TextBlock Text="Enter First name:" Margin="0 0 0 3" FontWeight="Medium" />
+            <Border CornerRadius="4" 
+                    BorderThickness="2" 
+                    BorderBrush="#B9D9EB" 
+                    Background="White" 
+                    Padding="2" 
+                    Margin="0 0 0 10">
+                <TextBox Text="{Binding Contact.FirstName}" BorderBrush="Transparent" BorderThickness="0" />
+            </Border>
+
+
+            <TextBlock Text="Enter Last name:" Margin="0 0 0 3" FontWeight="Medium" />
+            <Border CornerRadius="4" 
+                    BorderThickness="2" 
+                    BorderBrush="#B9D9EB" 
+                    Background="White" 
+                    Padding="2" 
+                    Margin="0 0 0 10">
+                <TextBox Text="{Binding Contact.LastName}" BorderBrush="Transparent" BorderThickness="0" />
+            </Border>
+
+            <TextBlock Text="Enter Email address:" Margin="0 0 0 3" FontWeight="Medium" />
+            <Border CornerRadius="4" 
+                    BorderThickness="2" 
+                    BorderBrush="#B9D9EB" 
+                    Background="White" 
+                    Padding="2" 
+                    Margin="0 0 0 10">
+                <TextBox Text="{Binding Contact.Email}" BorderBrush="Transparent" BorderThickness="0" />
+            </Border>
+
+            <TextBlock Text="Enter Home address:" Margin="0 0 0 3" FontWeight="Medium" />
+            <Border CornerRadius="4" 
+                    BorderThickness="2" 
+                    BorderBrush="#B9D9EB" 
+                    Background="White" 
+                    Padding="2" 
+                    Margin="0 0 0 10">
+                <TextBox Text="{Binding Contact.HomeAddress}" BorderBrush="Transparent" BorderThickness="0" />
+            </Border>
+
+            <TextBlock Text="Enter Postal code:" Margin="0 0 0 3" FontWeight="Medium" />
+            <Border CornerRadius="4" 
+                    BorderThickness="2" 
+                    BorderBrush="#B9D9EB" 
+                    Background="White" 
+                    Padding="2">
+                <TextBox Text="{Binding Contact.PostalCode}" BorderBrush="Transparent" BorderThickness="0" />
+            </Border>
+        </StackPanel>
+
+        <Button Command="{Binding AddContactCommand}" Grid.Row="2" Content="ADD" Style="{StaticResource addButton}" />
+
+    </Grid>
+</UserControl>

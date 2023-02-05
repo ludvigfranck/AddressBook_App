@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <FontFamily x:Key="FontAwesome-Regular">/Assets/Fonts/fa-regular-400.ttf#Font Awesome 6 Free Regular</FontFamily>
+    <FontFamily x:Key="FontAwesome-Solid">/Assets/Fonts/fa-solid-900.ttf#Font Awesome 6 Free Solid</FontFamily>
+
+    <Style x:Key="addButton" TargetType="Button">
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Width" Value="130" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Margin" Value="20" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="6" BorderThickness="2" BorderBrush="#073980" Background="#6082B6">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>
